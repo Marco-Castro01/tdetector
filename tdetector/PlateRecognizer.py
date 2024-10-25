@@ -8,5 +8,6 @@ class PlateRecognizer:
 
     def recognize_plate(self, image):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        text = pytesseract.image_to_string(gray, config='--psm 8')
+        text = pytesseract.image_to_string(gray, config='--psm 9')
+        print(f"Recognized plate: {text}")
         return text
